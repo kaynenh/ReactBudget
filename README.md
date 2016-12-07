@@ -1,4 +1,4 @@
 ## React Budget
 
-> Personal Project to better understand React JS
-> Built from Starter Kit — "[isomorphic](http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/)" web app boilerplate
+> Personal Project to better understand React JS,
+> built from [React Starter Kit](https://github.com/kriasoft/react-starter-kit)
