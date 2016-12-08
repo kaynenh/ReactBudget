@@ -10,6 +10,32 @@
 import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
+import Spreadsheet from 'react-spreadsheet-component';
+
+var exampleOne = {};
+
+exampleOne.initialData = {
+  rows: [
+    ['', '', '', '', '', '', '', ''],
+    ['', 1, 2, 3, 4, 5, 6, 7],
+    ['', 1, '', 3, 4, 5, 6, 7],
+    ['', 1, 2, 3, 4, 5, 6, 7],
+    ['', 1, 2, 3, 4, 5, 6, 7]
+  ]
+};
+
+exampleOne.config = {
+  rows: 5,
+  columns: 8,
+  hasHeadColumn: true,
+  isHeadColumnString: true,
+  hasHeadRow: true,
+  isHeadRowString: true,
+  canAddRow: true,
+  canAddColumn: true,
+  emptyValueSymbol: '-',
+  hasLetterNumberHeads: true
+};
 
 class Home extends React.Component {
   static propTypes = {
