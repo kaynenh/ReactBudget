@@ -12,30 +12,39 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
 import SpreadsheetComponent from 'react-spreadsheet-component';
 
-var exampleOne = {};
-
-exampleOne.initialData = {
+// Example Two
+var exampleTwo = {};
+exampleTwo.initialData = {
   rows: [
-    ['', '', '', '', '', '', '', ''],
-    ['', 1, 2, 3, 4, 5, 6, 7],
-    ['', 1, '', 3, 4, 5, 6, 7],
-    ['', 1, 2, 3, 4, 5, 6, 7],
-    ['', 1, 2, 3, 4, 5, 6, 7]
+    ['Customer', 'Job', 'Contact', 'City', 'Revenue'],
+    ['iDiscovery', 'Build', 'John Doe', 'Boston, MA', '500,000'],
+    ['SxSW', 'Build', 'Tom Fuller', 'San Francisco, CA', '600,000'],
+    ['CapitalTwo', 'Failed', 'Eric Pixel', 'Seattle, WA', '450,000']
   ]
 };
 
-exampleOne.config = {
-  rows: 5,
-  columns: 8,
-  hasHeadColumn: true,
-  isHeadColumnString: true,
-  hasHeadRow: true,
-  isHeadRowString: true,
-  canAddRow: true,
-  canAddColumn: true,
-  emptyValueSymbol: '-',
-  hasLetterNumberHeads: true
+exampleTwo.cellClasses = {
+  rows: [
+    ['', '', '', '', '', '', '', ''],
+    ['green', '', '', '', '', '', '', 'dollar'],
+    ['purple', '', '', '', '', '', '', 'dollar'],
+    ['yellow', 'failed', '', '', '', '', '', 'dollar'],
+  ]
 };
+
+exampleTwo.config = {
+  rows: 5,
+  columns: 5,
+  headColumn: true,
+  headColumnIsString: true,
+  headRow: true,
+  headRowIsString: true,
+  canAddRow: false,
+  canAddColumn: false,
+  emptyValueSymbol: '-',
+  letterNumberHeads: false
+};
+
 
 class Home extends React.Component {
   static propTypes = {
@@ -51,7 +60,9 @@ class Home extends React.Component {
       <div className={s.root}>
         <div className={s.container}>
           <h1 className={s.title}></h1>
-          <SpreadsheetComponent initialData={exampleOne.initialData} config={exampleOne.config} spreadsheetId="1" />
+          <div className='sheet'>
+            <SpreadsheetComponent initialData={exampleTwo.initialData} config={exampleTwo.config} cellClasses={exampleTwo.cellClasses} spreadsheetId="mainSheet" />
+          </div>
           {/*<ul className={s.news}>
             {this.props.news.map((item, index) => (
               <li key={index} className={s.newsItem}>
