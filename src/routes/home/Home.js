@@ -16,10 +16,8 @@ import SpreadsheetComponent from 'react-spreadsheet-component';
 var exampleTwo = {};
 exampleTwo.initialData = {
   rows: [
-    ['Customer', 'Job', 'Contact', 'City', 'Revenue'],
-    ['iDiscovery', 'Build', 'John Doe', 'Boston, MA', '500,000'],
-    ['SxSW', 'Build', 'Tom Fuller', 'San Francisco, CA', '600,000'],
-    ['CapitalTwo', 'Failed', 'Eric Pixel', 'Seattle, WA', '450,000']
+    ['Name', 'Hole 1', 'Hole 2', 'Hole 3', 'Hole 4', 'Hole 5', 'Hole 6', 'Hole 7', 'Hole 8', 'Hole 9'],
+    ['', '', '', '', '', '', '', '', '', '', ]
   ]
 };
 
@@ -27,8 +25,6 @@ exampleTwo.cellClasses = {
   rows: [
     ['', '', '', '', '', '', '', ''],
     ['green', '', '', '', '', '', '', 'dollar'],
-    ['purple', '', '', '', '', '', '', 'dollar'],
-    ['yellow', 'failed', '', '', '', '', '', 'dollar'],
   ]
 };
 

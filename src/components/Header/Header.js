@@ -22,12 +22,8 @@ class Header extends React.Component {
         <div className={s.container}>
           <Navigation className={s.nav} />
           <Link className={s.brand} to="/">
-            <span className={s.brandTxt}>React Budget</span>
+            <span className={s.brandTxt}>React Tracker</span>
           </Link>
-          <div className={s.banner}>
-            <h1 className={s.bannerTitle}>React Budget</h1>
-            <p className={s.bannerDesc}>Easy Budgeting Software</p>
-          </div>
         </div>
       </div>
     );
