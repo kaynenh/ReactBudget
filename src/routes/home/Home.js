@@ -11,7 +11,6 @@ import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
 import SpreadsheetComponent from 'react-spreadsheet-component';
-import Dispatcher from './react-spreadsheet-component/src/dispatcher';
 
 // Example Two
 var exampleTwo = {};
@@ -42,10 +41,12 @@ exampleTwo.config = {
   letterNumberHeads: false
 };
 
+var Dispatcher = require('../../../node_modules/react-spreadsheet-component/src/dispatcher.js');
+
 Dispatcher.subscribe('dataChanged', function (data) {
   // data: The entire new data state
   console.log(data);
-}, 'mainSheet')
+}, 'mainSheet');
 
 
 class Home extends React.Component {
