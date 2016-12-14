@@ -41,11 +41,14 @@ exampleTwo.config = {
   letterNumberHeads: false
 };
 
-var Dispatcher = require('../../../node_modules/react-spreadsheet-component/src/dispatcher.js');
+var Dispatcher = require('../../../node_modules/react-spreadsheet-component/lib/dispatcher.js');
 
 Dispatcher.subscribe('dataChanged', function (data) {
   // data: The entire new data state
-  console.log(data);
+  var row1 = data.rows[1];
+  console.log(row1);
+  var sum = row1.reduce((a, b) => (Number(a)>0?Number(a):0) + (Number(b)>0?Number(b):0), 0);
+  console.log(sum);
 }, 'mainSheet');
 
 
@@ -82,5 +85,8 @@ class Home extends React.Component {
     );
   }
 }
+
+
+console.log(SpreadsheetComponent);
 
 export default withStyles(s)(Home);
