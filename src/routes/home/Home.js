@@ -45,6 +45,7 @@ var Dispatcher = require('../../../node_modules/react-spreadsheet-component/lib/
 
 Dispatcher.subscribe('dataChanged', function (data) {
   // data: The entire new data state
+  // Need to find what data changed
   console.log(data);
   var row1 = data.rows[1];
   var sum = 0;
