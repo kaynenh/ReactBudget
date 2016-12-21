@@ -16,10 +16,10 @@ import SpreadsheetComponent from 'react-spreadsheet-component';
 var exampleTwo = {};
 exampleTwo.initialData = {
   rows: [
-    ['Name', 'Hole 1', 'Hole 2', 'Hole 3', 'Hole 4', 'Hole 5', 'Hole 6', 'Hole 7', 'Hole 8', 'Hole 9', 'Total'],
-    ['', '', '', '', '', '', '', '', '', '','' ],
-    ['', '', '', '', '', '', '', '', '', '','' ],
-    ['', '', '', '', '', '', '', '', '', '','' ]
+    ['Name', 'Hole 1', 'Hole 2', 'Hole 3', 'Hole 4', 'Hole 5', 'Hole 6', 'Hole 7', 'Hole 8', 'Hole 9', 'Total', 'Net'],
+    ['', '', '', '', '', '', '', '', '', '','', '' ],
+    ['', '', '', '', '', '', '', '', '', '','', '' ],
+    ['', '', '', '', '', '', '', '', '', '','', '' ]
   ]
 };
 
