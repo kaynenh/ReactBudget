@@ -100,7 +100,7 @@ app.get('*', async (req, res, next) => {
         styles.forEach(style => css.add(style._getCss()));
       },
     };
-
+    console.log(routes);
     const route = await UniversalRouter.resolve(routes, {
       path: req.path,
       query: req.query,

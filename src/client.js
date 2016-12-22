@@ -113,6 +113,7 @@ let appInstance;
 let currentLocation = history.location;
 let routes = require('./routes').default;
 
+
 // Re-render the app when window.location changes
 async function onLocationChange(location) {
   // Remember the latest scroll position for the previous location

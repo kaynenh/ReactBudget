@@ -10,61 +10,6 @@
 import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
-import SpreadsheetComponent from 'react-spreadsheet-component';
-
-// Example Two
-var exampleTwo = {};
-exampleTwo.initialData = {
-  rows: [
-    ['Name', 'Hole 1', 'Hole 2', 'Hole 3', 'Hole 4', 'Hole 5', 'Hole 6', 'Hole 7', 'Hole 8', 'Hole 9', 'Total', 'Net'],
-    ['', '', '', '', '', '', '', '', '', '','', '' ],
-    ['', '', '', '', '', '', '', '', '', '','', '' ],
-    ['', '', '', '', '', '', '', '', '', '','', '' ]
-  ]
-};
-
-exampleTwo.cellClasses = {
-  rows: [
-    ['', '', '', '', '', '', '', ''],
-    ['green', '', '', '', '', '', '', 'dollar'],
-    ['green', '', '', '', '', '', '', 'dollar'],
-    ['green', '', '', '', '', '', '', 'dollar'],
-  ]
-};
-
-exampleTwo.config = {
-  rows: 5,
-  columns: 5,
-  headColumn: true,
-  headColumnIsString: true,
-  headRow: true,
-  headRowIsString: true,
-  canAddRow: false,
-  canAddColumn: false,
-  emptyValueSymbol: '-',
-  letterNumberHeads: false
-};
-
-var Dispatcher = require('../../../node_modules/react-spreadsheet-component/lib/dispatcher.js');
-
-Dispatcher.subscribe('dataChanged', function (data) {
-  // data: The entire new data state
-  // Need to find what data changed
-  console.log(data);
-  console.log(data.rows.length);
-  for (var row=1; row<data.rows.length; row++) {
-    var sum = 0;
-    for (var i = 1; i < 10; i++) {
-      console.log((data.rows[row][i]));
-      sum += Number(data.rows[row][i]);
-    }
-    //var sum = row1.reduce((a, b) => (Number(a)>0?Number(a):0) + (Number(b)>0?Number(b):0), 0);
-
-    data.rows[row][10] = sum;
-    console.log(sum);
-  }
-}, 'mainSheet');
-
 
 class Home extends React.Component {
   static propTypes = {
@@ -80,9 +25,7 @@ class Home extends React.Component {
       <div className={s.root}>
         <div className={s.container}>
           <h1 className={s.title}></h1>
-          <div className='sheet'>
-            <SpreadsheetComponent initialData={exampleTwo.initialData} config={exampleTwo.config} cellClasses={exampleTwo.cellClasses} spreadsheetId="mainSheet" />
-          </div>
+          <p>Welcome home!</p>
           {/*<ul className={s.news}>
             {this.props.news.map((item, index) => (
               <li key={index} className={s.newsItem}>
@@ -99,8 +42,5 @@ class Home extends React.Component {
     );
   }
 }
-
-
-console.log(SpreadsheetComponent);
 
 export default withStyles(s)(Home);
