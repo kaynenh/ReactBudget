@@ -1,0 +1,90 @@
+
+.sheet {
+    position: relative;
+}
+
+div.sheet td, div.sheet th {
+    width: 128px;
+    height: 35px;
+    border: none;
+    text-align: left;
+    background-color: inherit;
+    position: relative;
+    overflow: hidden !important;
+}
+
+div.sheet th {
+    background-color: #fff;
+}
+
+div.sheet span {
+    line-height: 35px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+div.sheet table {
+    -webkit-box-shadow: 2px 2px 36px 0px rgba(0,0,0,0.39);
+    -moz-box-shadow: 2px 2px 36px 0px rgba(0,0,0,0.39);
+    box-shadow: 2px 2px 36px 0px rgba(0,0,0,0.39);
+    border: none;
+    padding: 8px;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #D7D7D7;
+    background-color: #FFFFFF;
+}
+
+div.sheet table > tbody > tr:first-child > th {
+    border-bottom: 1px solid #D8D8D8;
+    border-right: none;
+    text-transform: uppercase;
+    text-align: left;
+    height: 30px;
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+
+div.sheet table > tbody > tr > th {
+    border-right: 1px solid #D8D8D8;
+}
+
+div.sheet table > tbody > tr > th:nth-child(2),
+div.sheet table > tbody > tr > td:nth-child(2)  {
+    padding-left: 15px;
+}
+
+div.sheet td input {
+    background-color: #F0FAFF;
+    width: 100%;
+    line-height: 35px;
+    height: 35px;
+    margin-left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+div.sheet td input + span {
+    display: none;
+}
+
+div.sheet tr:hover {
+    background-color: #EEEEEE;
+}
+
+div.sheet input::selection {
+    background: #F0FAFF;
+}
+
+div.sheet .selected {
+    border-bottom: 2px solid #FF074E;
+}
+
+div.sheet .green {
+    border-left: 3px solid #62B9A4;
+}
