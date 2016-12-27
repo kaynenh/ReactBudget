@@ -43,7 +43,7 @@ export default [{
     const data = await resp.json();
     return data && {
           title: 'Scores',
-          component: <Layout><Scores /></Layout>
+          component: <Layout><Scores user={data.user} /></Layout>
         };
   }
 }];
