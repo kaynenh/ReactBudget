@@ -12,7 +12,7 @@ import Scores from './Scores';
 import fetch from '../../core/fetch';
 import Layout from '../../components/Layout';
 
-export default [{
+export default {
 
   path: '/scores',
 
@@ -35,17 +35,4 @@ export default [{
       component: <Layout><Scores news={data.news} /></Layout>,
     };
   },
-},
-{
-  path: '/scores/:user_id',
-  async action({ path, params, query }) {
-    console.log(path);                // => '/path/hello'
-    console.log(params);              // => { any: 'hello' }
-    console.log(query);               // => { the: 'query' }
-    const data = await resp.json();
-    return data && {
-          title: 'Scores for User '+params.user_id,
-          component: <Layout><Scores user={params.user_id} /></Layout>
-        };
-  }
-}];
+};

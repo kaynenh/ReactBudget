@@ -22,6 +22,7 @@ export default {
     require('./register').default,
     require('./admin').default,
     require('./scores').default,
+    require('./scores/tasks').default,
 
     // Wildcard routes, e.g. { path: '*', ... } (must go last)
     require('./content').default,
