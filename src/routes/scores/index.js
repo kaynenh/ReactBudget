@@ -38,12 +38,14 @@ export default [{
 },
 {
   path: '/scores/:user_id',
-  async action() {
-    const resp = await fetch(`/api/tasks/${params.id}`);
+  async action({ path, params, query }) {
+    console.log(path);                // => '/path/hello'
+    console.log(params);              // => { any: 'hello' }
+    console.log(query);               // => { the: 'query' }
     const data = await resp.json();
     return data && {
-          title: 'Scores',
-          component: <Layout><Scores user={data.user} /></Layout>
+          title: 'Scores for User '+params.user_id,
+          component: <Layout><Scores user={params.user_id} /></Layout>
         };
   }
 }];
