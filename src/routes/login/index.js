@@ -13,6 +13,7 @@ import Login from './Login';
 
 const title = 'Log In';
 
+//TODO: Implement OAuth login from Github example
 export default {
 
   path: '/login',
